@@ -23,12 +23,28 @@ public class Deck {
 	
 	public String toString() {
 		String cardList= "";
-		int i =0;
 		for(Card aCard : this.cards) {
-			cardList += "\n" +i + " "+ aCard.toString();
-			i++;
+			cardList += "\n" +" "+ aCard.toString();
+			
 		}
 		return cardList;
+	}
+	
+	public void removeCard(int i) {
+		this.cards.remove(i);
+	}
+	
+	public Card getCard(int i) {
+		return this.cards.get(i);
+	}
+	
+	public void addCard(Card card) {
+		this.cards.add(card);
+	}
+	
+	public void draw(Deck deckComing) {
+		this.cards.add(deckComing.getCard(0));
+		deckComing.removeCard(0);
 	}
 	
 }
