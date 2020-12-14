@@ -4,7 +4,7 @@ public enum Value {
     ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING;
     public String toString() {
         switch(this) {
-        case ACE: return "1";
+        case ACE: return "A";
         case TWO: return "2";
         case THREE: return "3";
         case FOUR: return "4";
